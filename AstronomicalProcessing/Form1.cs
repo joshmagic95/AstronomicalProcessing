@@ -16,5 +16,10 @@ namespace AstronomicalProcessing
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Test commit to master
+        }
     }
 }
