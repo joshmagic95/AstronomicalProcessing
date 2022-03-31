@@ -1,0 +1,11 @@
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe.config
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.pdb
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.AssemblyReference.cache
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.SuggestedBindingRedirects.cache
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.Form1.resources
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.Properties.Resources.resources
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.GenerateResource.cache
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.CoreCompileInputs.cache
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.exe
+C:\Users\M153428\Source\Repos\joshmagic95\AstronomicalProcessing\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.pdb

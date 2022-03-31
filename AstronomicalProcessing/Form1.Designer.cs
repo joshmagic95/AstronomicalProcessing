@@ -1,6 +1,6 @@
 ﻿namespace AstronomicalProcessing
 {
-    partial class Form1
+    partial class frmAstronomicalProcessing
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lstArray = new System.Windows.Forms.ListBox();
+            this.lblArray = new System.Windows.Forms.Label();
+            this.btnSort = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.txtEdit = new System.Windows.Forms.TextBox();
+            this.lblEdit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // lstArray
             // 
-            this.button1.Location = new System.Drawing.Point(354, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lstArray.FormattingEnabled = true;
+            this.lstArray.Location = new System.Drawing.Point(12, 25);
+            this.lstArray.Name = "lstArray";
+            this.lstArray.Size = new System.Drawing.Size(148, 407);
+            this.lstArray.TabIndex = 0;
             // 
-            // listBox1
+            // lblArray
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(109, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 1;
+            this.lblArray.AutoSize = true;
+            this.lblArray.Location = new System.Drawing.Point(12, 9);
+            this.lblArray.Name = "lblArray";
+            this.lblArray.Size = new System.Drawing.Size(69, 13);
+            this.lblArray.TabIndex = 1;
+            this.lblArray.Text = "Array Output:";
             // 
-            // button2
+            // btnSort
             // 
-            this.button2.Location = new System.Drawing.Point(400, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSort.Location = new System.Drawing.Point(166, 25);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(100, 23);
+            this.btnSort.TabIndex = 2;
+            this.btnSort.Text = "Sort Array";
+            this.btnSort.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(166, 66);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(44, 13);
+            this.lblSearch.TabIndex = 3;
+            this.lblSearch.Text = "Search:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(166, 83);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Enabled = false;
+            this.btnSearch.Location = new System.Drawing.Point(166, 110);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(100, 23);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Search Array";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Enabled = false;
+            this.btnEdit.Location = new System.Drawing.Point(166, 193);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 23);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.Text = "Edit Data";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // txtEdit
+            // 
+            this.txtEdit.Enabled = false;
+            this.txtEdit.Location = new System.Drawing.Point(166, 166);
+            this.txtEdit.Name = "txtEdit";
+            this.txtEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtEdit.TabIndex = 7;
+            // 
+            // lblEdit
+            // 
+            this.lblEdit.AutoSize = true;
+            this.lblEdit.Location = new System.Drawing.Point(166, 149);
+            this.lblEdit.Name = "lblEdit";
+            this.lblEdit.Size = new System.Drawing.Size(28, 13);
+            this.lblEdit.TabIndex = 6;
+            this.lblEdit.Text = "Edit:";
+            // 
+            // frmAstronomicalProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(276, 450);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.txtEdit);
+            this.Controls.Add(this.lblEdit);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.lblArray);
+            this.Controls.Add(this.lstArray);
+            this.Name = "frmAstronomicalProcessing";
+            this.Text = "Astronomical Processing";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox lstArray;
+        private System.Windows.Forms.Label lblArray;
+        private System.Windows.Forms.Button btnSort;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.TextBox txtEdit;
+        private System.Windows.Forms.Label lblEdit;
     }
 }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AstronomicalProcessing
 {
-    public partial class Form1 : Form
+    public partial class frmAstronomicalProcessing : Form
     {
-        public Form1()
+        public frmAstronomicalProcessing()
         {
             InitializeComponent();
         }
