@@ -22,6 +22,8 @@ namespace AstronomicalProcessing
             InitializeComponent();
             FillArray();
             RefreshArray();
+            txtSearch.Enabled = true;
+            btnSearch.Enabled = true;
         }
         
         // Fill the array with random values, to simulate the data
@@ -58,18 +60,17 @@ namespace AstronomicalProcessing
             RefreshArray();
         }
 
-        // Search the sorted array
-        public void SearchArray() {
-        // Declare minimum and maximum array values
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // Declare minimum and maximum array values
             int min = 0;
             int max = arrayLength - 1;
-            // Try to parse integer input from txtSearch and output to integer target
             if (!(Int32.TryParse(txtSearch.Text, out int target)))
             {
-                // If the integer test fails, display a message box
                 MessageBox.Show("You must enter an integer");
                 return;
             }
+
             // While the min is less than or equal to max, enter the while loop
             while (min <= max)
             {
@@ -89,6 +90,18 @@ namespace AstronomicalProcessing
                 {
                     min = mid + 1;
                 }
+            }
+            MessageBox.Show(target + " not found in array");
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            // If the character is a letter or a control character, 
+            if (!char.IsDigit(ch) && !char.IsControl(ch))
+            {
+                // If the test fails, display a message box and clear the text box
+                e.Handled = true;
             }
         }
     }
