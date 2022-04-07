@@ -37,6 +37,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtEdit = new System.Windows.Forms.TextBox();
             this.lblEdit = new System.Windows.Forms.Label();
+            this.btnRandomise = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstArray
@@ -58,7 +59,7 @@
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(166, 25);
+            this.btnSort.Location = new System.Drawing.Point(166, 58);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(100, 23);
             this.btnSort.TabIndex = 2;
@@ -69,7 +70,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(166, 66);
+            this.lblSearch.Location = new System.Drawing.Point(166, 99);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(44, 13);
             this.lblSearch.TabIndex = 3;
@@ -78,7 +79,7 @@
             // txtSearch
             // 
             this.txtSearch.Enabled = false;
-            this.txtSearch.Location = new System.Drawing.Point(166, 83);
+            this.txtSearch.Location = new System.Drawing.Point(166, 116);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 4;
@@ -87,7 +88,7 @@
             // btnSearch
             // 
             this.btnSearch.Enabled = false;
-            this.btnSearch.Location = new System.Drawing.Point(166, 110);
+            this.btnSearch.Location = new System.Drawing.Point(166, 143);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 23);
             this.btnSearch.TabIndex = 5;
@@ -98,7 +99,7 @@
             // btnEdit
             // 
             this.btnEdit.Enabled = false;
-            this.btnEdit.Location = new System.Drawing.Point(166, 193);
+            this.btnEdit.Location = new System.Drawing.Point(166, 226);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 23);
             this.btnEdit.TabIndex = 8;
@@ -109,7 +110,7 @@
             // txtEdit
             // 
             this.txtEdit.Enabled = false;
-            this.txtEdit.Location = new System.Drawing.Point(166, 166);
+            this.txtEdit.Location = new System.Drawing.Point(166, 199);
             this.txtEdit.Name = "txtEdit";
             this.txtEdit.Size = new System.Drawing.Size(100, 20);
             this.txtEdit.TabIndex = 7;
@@ -118,17 +119,28 @@
             // lblEdit
             // 
             this.lblEdit.AutoSize = true;
-            this.lblEdit.Location = new System.Drawing.Point(166, 149);
+            this.lblEdit.Location = new System.Drawing.Point(166, 182);
             this.lblEdit.Name = "lblEdit";
             this.lblEdit.Size = new System.Drawing.Size(28, 13);
             this.lblEdit.TabIndex = 6;
             this.lblEdit.Text = "Edit:";
+            // 
+            // btnRandomise
+            // 
+            this.btnRandomise.Location = new System.Drawing.Point(166, 25);
+            this.btnRandomise.Name = "btnRandomise";
+            this.btnRandomise.Size = new System.Drawing.Size(98, 23);
+            this.btnRandomise.TabIndex = 9;
+            this.btnRandomise.Text = "Randomise";
+            this.btnRandomise.UseVisualStyleBackColor = true;
+            this.btnRandomise.Click += new System.EventHandler(this.RandomiseArray);
             // 
             // frmAstronomicalProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(276, 450);
+            this.Controls.Add(this.btnRandomise);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtEdit);
             this.Controls.Add(this.lblEdit);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox txtEdit;
         private System.Windows.Forms.Label lblEdit;
+        private System.Windows.Forms.Button btnRandomise;
     }
 }
 

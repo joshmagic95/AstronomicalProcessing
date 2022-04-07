@@ -20,8 +20,6 @@ namespace AstronomicalProcessing
         int[] neutrinoData = new int[arrayLength];
         public frmAstronomicalProcessing() {
             InitializeComponent();
-            FillArray();
-            RefreshArray();
         }
         
         // Fill the array with random values, to simulate the data
@@ -39,8 +37,15 @@ namespace AstronomicalProcessing
                 lstArray.Items.Add(neutrinoData[i]);
             }
         }
-        
-        // Sort the array using the bubble sorting algorithm when btnSort is clicked on
+
+        // Perform the FillArray() and RefreshArray() methods when btnRandomise is clicked
+        private void RandomiseArray(object sender, EventArgs e)
+        {
+            FillArray();
+            RefreshArray();
+        }
+
+        // Sort the array using the bubble sorting algorithm when btnSort is clicked
         private void BubbleSort(object sender, EventArgs e) {
             int numLength = arrayLength;
             bool flag = true;
@@ -94,10 +99,10 @@ namespace AstronomicalProcessing
             MessageBox.Show(target + " not found in array");
         }
 
+        // Checks both text boxes if there are any non-integer characters
         private void IntegerCheck(object sender, KeyPressEventArgs e)
         {
-            char ch = e.KeyChar;
-            // If the character is a letter or a control character, 
+            char ch = e.KeyChar; 
             if (!char.IsDigit(ch) && !char.IsControl(ch))
             {
                 // If the test fails, display a message box and clear the text box
@@ -105,7 +110,7 @@ namespace AstronomicalProcessing
             }
         }
         
-
+        // Edit the selected item within the array and then sort the array
         private void EditData(object sender, EventArgs e)
         {
             if (!(Int32.TryParse(txtEdit.Text, out int editData)))
@@ -126,11 +131,15 @@ namespace AstronomicalProcessing
                 BubbleSort(this, e);
             }
         }
+
+        // Enable Search related text box and button
         private void EnableSearchButton()
         {
             txtSearch.Enabled = true;
             btnSearch.Enabled = true;
         }
+
+        // Enable Edit related text box and button
         private void EnableEditButton()
         {
             txtEdit.Enabled = true;
