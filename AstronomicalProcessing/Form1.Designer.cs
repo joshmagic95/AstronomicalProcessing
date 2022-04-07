@@ -38,6 +38,7 @@
             this.txtEdit = new System.Windows.Forms.TextBox();
             this.lblEdit = new System.Windows.Forms.Label();
             this.btnRandomise = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstArray
@@ -135,11 +136,20 @@
             this.btnRandomise.UseVisualStyleBackColor = true;
             this.btnRandomise.Click += new System.EventHandler(this.RandomiseArray);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(174, 295);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 10;
+            // 
             // frmAstronomicalProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(276, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRandomise);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtEdit);
@@ -169,6 +179,7 @@
         private System.Windows.Forms.TextBox txtEdit;
         private System.Windows.Forms.Label lblEdit;
         private System.Windows.Forms.Button btnRandomise;
+        private System.Windows.Forms.Label label1;
     }
 }
 
