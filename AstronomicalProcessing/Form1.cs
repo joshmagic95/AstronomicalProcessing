@@ -22,10 +22,6 @@ namespace AstronomicalProcessing
             InitializeComponent();
             FillArray();
             RefreshArray();
-
-            // Programmatically enable search button and textbox for testing purposes
-            txtSearch.Enabled = true;
-            btnSearch.Enabled = true;
         }
         
         // Fill the array with random values, to simulate the data
@@ -60,6 +56,8 @@ namespace AstronomicalProcessing
                 }
             }
             RefreshArray();
+            EnableSearchButton();
+            EnableEditButton();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -96,7 +94,7 @@ namespace AstronomicalProcessing
             MessageBox.Show(target + " not found in array");
         }
 
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        private void IntegerCheck(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             // If the character is a letter or a control character, 
@@ -105,6 +103,16 @@ namespace AstronomicalProcessing
                 // If the test fails, display a message box and clear the text box
                 e.Handled = true;
             }
+        }
+        private void EnableSearchButton()
+        {
+            txtSearch.Enabled = true;
+            btnSearch.Enabled = true;
+        }
+        private void EnableEditButton()
+        {
+            txtEdit.Enabled = true;
+            btnEdit.Enabled = true;
         }
     }
 }
