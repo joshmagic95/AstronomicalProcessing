@@ -54,7 +54,7 @@ namespace AstronomicalProcessing
                 // Write the mean of min and max to mid
                 int mid = (min + max) / 2;
 
-                if (target = neutrinoData[mid])
+                if (target == neutrinoData[mid])
                 {
                     MessageBox.Show(target + " Found at index " + mid);
                     return;
