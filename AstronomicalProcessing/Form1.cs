@@ -35,5 +35,39 @@ namespace AstronomicalProcessing
                 lstArray.Items.Add(neutrinoData[i]);
             }
         }
+
+        // Search the sorted array
+        public void SearchArray() {
+        // Declare minimum and maximum array values
+            int min = 0;
+            int max = arrayLength - 1;
+            // Try to parse integer input from txtSearch and output to integer target
+            if (!(Int32.TryParse(txtSearch.Text, out int target)))
+            {
+                // If the integer test fails, display a message box
+                MessageBox.Show("You must enter an integer");
+                return;
+            }
+            // While the min is less than or equal to max, enter the while loop
+            while (min <= max)
+            {
+                // Write the mean of min and max to mid
+                int mid = (min + max) / 2;
+
+                if (target = neutrinoData[mid])
+                {
+                    MessageBox.Show(target + " Found at index " + mid);
+                    return;
+                }
+                else if (neutrinoData[mid] >= target)
+                {
+                    max = mid - 1;
+                }
+                else
+                {
+                    min = mid + 1;
+                }
+            }
+        }
     }
 }
