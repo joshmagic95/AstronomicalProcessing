@@ -32,7 +32,7 @@
             this.lblArray = new System.Windows.Forms.Label();
             this.btnSort = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtEdit = new System.Windows.Forms.TextBox();
@@ -74,13 +74,13 @@
             this.lblSearch.TabIndex = 3;
             this.lblSearch.Text = "Search:";
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(166, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtSearch.Enabled = false;
+            this.txtSearch.Location = new System.Drawing.Point(166, 83);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.TabIndex = 4;
             // 
             // btnSearch
             // 
@@ -128,7 +128,7 @@
             this.Controls.Add(this.txtEdit);
             this.Controls.Add(this.lblEdit);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.lblArray);
@@ -146,7 +146,7 @@
         private System.Windows.Forms.Label lblArray;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox txtEdit;
