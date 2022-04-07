@@ -40,7 +40,7 @@ namespace AstronomicalProcessing
             }
         }
         
-        // Sort the array using the bubble sorting algorithm
+        // Sort the array using the bubble sorting algorithm when btnSort is clicked on
         private void BubbleSort(object sender, EventArgs e) {
             int numLength = arrayLength;
             bool flag = true;
@@ -60,7 +60,7 @@ namespace AstronomicalProcessing
             EnableEditButton();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void BinarySearch(object sender, EventArgs e)
         {
             // Declare minimum and maximum array values
             int min = 0;

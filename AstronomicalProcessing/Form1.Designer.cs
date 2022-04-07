@@ -93,7 +93,7 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search Array";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.Click += new System.EventHandler(this.BinarySearch);
             // 
             // btnEdit
             // 
