@@ -104,6 +104,28 @@ namespace AstronomicalProcessing
                 e.Handled = true;
             }
         }
+        
+
+        private void EditData(object sender, EventArgs e)
+        {
+            if (!(Int32.TryParse(txtEdit.Text, out int editData)))
+            {
+                MessageBox.Show("You must enter an integer");
+                return;
+            }
+            else if (lstArray.SelectedItem == null)
+            {
+                MessageBox.Show("You must select an item in the array");
+                return;
+            }
+            else
+            {
+                string currentItem = lstArray.SelectedItem.ToString();
+                int index = lstArray.FindString(currentItem);
+                neutrinoData[index] = editData;
+                BubbleSort(this, e);
+            }
+        }
         private void EnableSearchButton()
         {
             txtSearch.Enabled = true;

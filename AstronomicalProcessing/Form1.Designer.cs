@@ -104,6 +104,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit Data";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.EditData);
             // 
             // txtEdit
             // 
