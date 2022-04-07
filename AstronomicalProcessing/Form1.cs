@@ -22,6 +22,8 @@ namespace AstronomicalProcessing
             InitializeComponent();
             FillArray();
             RefreshArray();
+
+            // Programmatically enable search button and textbox for testing purposes
             txtSearch.Enabled = true;
             btnSearch.Enabled = true;
         }
