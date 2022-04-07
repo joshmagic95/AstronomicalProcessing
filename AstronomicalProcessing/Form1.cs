@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Team: Joshua and Rhys
+// Date: 07/04/2022
+// Description
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +38,24 @@ namespace AstronomicalProcessing
             for (int i = 0; i < arrayLength; i++) {
                 lstArray.Items.Add(neutrinoData[i]);
             }
+        }
+        
+        // Sort the array using the bubble sorting algorithm
+        private void BubbleSort(object sender, EventArgs e) {
+            int numLength = arrayLength;
+            bool flag = true;
+            for (int i = 1; (i <= (numLength - 1)) && flag; i++) {
+                flag = false;
+                for (int j = 0; j < (numLength - 1); j++) {
+                    if (neutrinoData[j + 1] < neutrinoData[j]) {
+                        int temp = neutrinoData[j];
+                        neutrinoData[j] = neutrinoData[j + 1];
+                        neutrinoData[j + 1] = temp;
+                        flag = true;
+                    }
+                }
+            }
+            RefreshArray();
         }
 
         // Search the sorted array

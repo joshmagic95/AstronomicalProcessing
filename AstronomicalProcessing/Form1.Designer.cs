@@ -64,6 +64,7 @@
             this.btnSort.TabIndex = 2;
             this.btnSort.Text = "Sort Array";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.BubbleSort);
             // 
             // lblSearch
             // 
