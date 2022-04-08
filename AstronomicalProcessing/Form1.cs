@@ -16,6 +16,7 @@ namespace AstronomicalProcessing
 {
     public partial class frmAstronomicalProcessing : Form
     {
+        // Create neutrinoData array with length 24
         static int arrayLength = 24;
         int[] neutrinoData = new int[arrayLength];
         public frmAstronomicalProcessing() {
@@ -38,11 +39,32 @@ namespace AstronomicalProcessing
             }
         }
 
+        // Check and re-randomise duplicate data in array 
+        public void CheckDuplicate()
+        {
+            int numLength = arrayLength;
+            bool flag = true;
+            for (int i = 1; (i <= (numLength - 1)) && flag; i++)
+            {
+                flag = false;
+                for (int j = 0; j < (numLength - 1); j++)
+                {
+                    if (neutrinoData[j + 1] == neutrinoData[j])
+                    {
+                        Random rand = new Random();
+                        neutrinoData[j] = rand.Next(10, 99);
+                        flag = true;
+                    }
+                }
+            }
+        }
+
         // Perform the FillArray() and RefreshArray() methods when btnRandomise is clicked
         private void RandomiseArray(object sender, EventArgs e)
         {
             FillArray();
             RefreshArray();
+            EnableSortButton();
         }
 
         // Sort the array using the bubble sorting algorithm when btnSort is clicked
@@ -61,13 +83,15 @@ namespace AstronomicalProcessing
                 }
             }
             RefreshArray();
+            CheckDuplicate();
             EnableSearchButton();
             EnableEditButton();
         }
 
+        // Perform a Binary Search when txtSearch has an integer value and btnSearch is clicked
         private void BinarySearch(object sender, EventArgs e)
         {
-            // Declare minimum and maximum array values
+            // Locally declare minimum and maximum array values
             int min = 0;
             int max = arrayLength - 1;
             if (!(Int32.TryParse(txtSearch.Text, out int target)))
@@ -76,7 +100,6 @@ namespace AstronomicalProcessing
                 return;
             }
 
-            // While the min is less than or equal to max, enter the while loop
             while (min <= max)
             {
                 // Write the mean of min and max to mid
@@ -105,7 +128,7 @@ namespace AstronomicalProcessing
             char ch = e.KeyChar; 
             if (!char.IsDigit(ch) && !char.IsControl(ch))
             {
-                // If the test fails, display a message box and clear the text box
+                // If the test fails, handle the event and don't input non-integer character
                 e.Handled = true;
             }
         }
@@ -130,6 +153,32 @@ namespace AstronomicalProcessing
                 neutrinoData[index] = editData;
                 BubbleSort(this, e);
             }
+        }
+
+        // Check if the Enter key is pressed in both text boxes, then run the correct method
+        private void EnterKeyCheck(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtSearch.Focused)
+                {
+                    BinarySearch(this, e);
+                }
+                else if (txtEdit.Focused)
+                {
+                    EditData(this, e);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter an integer in the box");
+                }
+            }
+        }
+
+        // Enable Sort button
+        private void EnableSortButton()
+        {
+            btnSort.Enabled = true;
         }
 
         // Enable Search related text box and button

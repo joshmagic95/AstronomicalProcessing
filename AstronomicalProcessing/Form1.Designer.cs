@@ -60,6 +60,7 @@
             // 
             // btnSort
             // 
+            this.btnSort.Enabled = false;
             this.btnSort.Location = new System.Drawing.Point(166, 58);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(100, 23);
@@ -84,6 +85,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 4;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterKeyCheck);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntegerCheck);
             // 
             // btnSearch
@@ -115,6 +117,7 @@
             this.txtEdit.Name = "txtEdit";
             this.txtEdit.Size = new System.Drawing.Size(100, 20);
             this.txtEdit.TabIndex = 7;
+            this.txtEdit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterKeyCheck);
             this.txtEdit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntegerCheck);
             // 
             // lblEdit
