@@ -95,7 +95,6 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Enabled = false;
             this.txtSearch.Location = new System.Drawing.Point(163, 92);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
@@ -127,7 +126,6 @@
             // 
             // txtEdit
             // 
-            this.txtEdit.Enabled = false;
             this.txtEdit.Location = new System.Drawing.Point(163, 235);
             this.txtEdit.Name = "txtEdit";
             this.txtEdit.Size = new System.Drawing.Size(100, 20);

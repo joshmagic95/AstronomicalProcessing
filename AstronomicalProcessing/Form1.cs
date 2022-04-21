@@ -29,7 +29,11 @@ namespace AstronomicalProcessing
             for (int i = 0; i < arrayLength; i++) {
                 neutrinoData[i] = rand.Next(10, 99);
             }
+            // Enable buttons that do not need the list to be sorted, but do
+            // need items to be in the list.
             btnSort.Enabled = true;
+            btnAvg.Enabled = true;
+            btnSeqSearch.Enabled = true;
         }
 
         // Clear the list box and reprint the array
@@ -84,7 +88,7 @@ namespace AstronomicalProcessing
                 }
             }
             RefreshArray();
-            CheckDuplicate();
+            //CheckDuplicate();
             EnableButtons();
         }
 
@@ -178,21 +182,17 @@ namespace AstronomicalProcessing
         // Enable or disable buttons and text boxes that require the list to be sorted
         private void EnableButtons() {
             btnBinSearch.Enabled = true;
+            btnMidExtr.Enabled = true;
             btnMode.Enabled = true;
             btnRange.Enabled = true;
             btnEdit.Enabled = true;
-
-            txtSearch.Enabled = true;
-            txtEdit.Enabled = true;
         }
         private void DisableButtons() {
             btnBinSearch.Enabled = false;
+            btnMidExtr.Enabled = false;
             btnMode.Enabled = false;
             btnRange.Enabled = false;
             btnEdit.Enabled = false;
-
-            txtSearch.Enabled = false;
-            txtEdit.Enabled = false;
         }
     }
 }
