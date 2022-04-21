@@ -29,6 +29,11 @@ namespace AstronomicalProcessing
             for (int i = 0; i < arrayLength; i++) {
                 neutrinoData[i] = rand.Next(10, 99);
             }
+            // Enable buttons that do not need the list to be sorted, but do
+            // need items to be in the list.
+            btnSort.Enabled = true;
+            btnAvg.Enabled = true;
+            btnSeqSearch.Enabled = true;
         }
 
         // Clear the list box and reprint the array
@@ -64,7 +69,7 @@ namespace AstronomicalProcessing
         {
             FillArray();
             RefreshArray();
-            EnableSortButton();
+            DisableButtons();
         }
 
         // Sort the array using the bubble sorting algorithm when btnSort is clicked
@@ -83,9 +88,8 @@ namespace AstronomicalProcessing
                 }
             }
             RefreshArray();
-            CheckDuplicate();
-            EnableSearchButton();
-            EnableEditButton();
+            //CheckDuplicate();
+            EnableButtons();
         }
 
         // Perform a Binary Search when txtSearch has an integer value and btnSearch is clicked
@@ -96,7 +100,7 @@ namespace AstronomicalProcessing
             int max = arrayLength - 1;
             if (!(Int32.TryParse(txtSearch.Text, out int target)))
             {
-                MessageBox.Show("You must enter an integer");
+                MessageBox.Show("You must enter a valid number");
                 return;
             }
 
@@ -117,6 +121,22 @@ namespace AstronomicalProcessing
                 else
                 {
                     min = mid + 1;
+                }
+            }
+            MessageBox.Show(target + " not found in array");
+        }
+        
+        // Search through the array until the target is found, or the array is fully searched
+        private void SequentialSearch(object sender, EventArgs e) {
+            if (!(Int32.TryParse(txtSearch.Text, out int target))) {
+                MessageBox.Show("You must enter a valid number");
+                return;
+            }
+            
+            for(int i = 0; i < arrayLength; i++) {
+                if (neutrinoData[i] == target) {
+                    MessageBox.Show(target + " Found at index " + i);
+                    return;
                 }
             }
             MessageBox.Show(target + " not found in array");
@@ -175,24 +195,59 @@ namespace AstronomicalProcessing
             }
         }
 
-        // Enable Sort button
-        private void EnableSortButton()
-        {
-            btnSort.Enabled = true;
-        }
-
-        // Enable Search related text box and button
-        private void EnableSearchButton()
-        {
-            txtSearch.Enabled = true;
-            btnSearch.Enabled = true;
-        }
-
-        // Enable Edit related text box and button
-        private void EnableEditButton()
-        {
-            txtEdit.Enabled = true;
+        // Enable or disable buttons and text boxes that require the list to be sorted
+        private void EnableButtons() {
+            btnBinSearch.Enabled = true;
+            btnMidExtr.Enabled = true;
+            btnMode.Enabled = true;
+            btnRange.Enabled = true;
             btnEdit.Enabled = true;
+            btnMidExtr.Enabled = true;
+        }
+        private void DisableButtons() {
+            btnBinSearch.Enabled = false;
+            btnMidExtr.Enabled = false;
+            btnMode.Enabled = false;
+            btnRange.Enabled = false;
+            btnEdit.Enabled = false;
+            btnMidExtr.Enabled = false;
+        }
+
+        // This method calculates the average of a sorted array using btnAvg
+        private void Average(object sender, EventArgs e)
+        {
+            double sum = 0;
+            double average = 0;
+
+            for (int i = 0; i < arrayLength; i++)
+            {
+                sum += neutrinoData[i];
+            }
+
+            average = Math.Round((sum / arrayLength), 2); // Round the average by 2 decimal places
+            txtAvg.Text = average.ToString();
+        }
+
+        // This method calculates the mid-extreme of a sorted array using btnMidExtr
+        private void MidExtreme(object sender, EventArgs e)
+        {
+            double smallest = 0;
+            double largest = 0;
+            double midExtreme = 0;
+            for (int i = 0; i < arrayLength; i++)
+            {
+                if (i == 0)
+                {
+                    smallest = neutrinoData[i];
+                }
+                else if (i == (arrayLength - 1))
+                {
+                    largest = neutrinoData[i];
+                }
+            }
+
+            midExtreme = Math.Round(((smallest + largest) / 2 ), 2);
+            txtMidExtr.Text = midExtreme.ToString();
         }
     }
 }
