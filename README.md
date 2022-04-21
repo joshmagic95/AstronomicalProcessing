@@ -1,4 +1,4 @@
-# Astronomical Processing
+# Astronomical Processing Revised
 
 ## Team Name
 Josh and Rhys
