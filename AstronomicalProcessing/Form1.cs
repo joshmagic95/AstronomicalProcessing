@@ -185,7 +185,7 @@ namespace AstronomicalProcessing
         private void EnableSearchButton()
         {
             txtSearch.Enabled = true;
-            btnSearch.Enabled = true;
+            btnBinSearch.Enabled = true;
         }
 
         // Enable Edit related text box and button
