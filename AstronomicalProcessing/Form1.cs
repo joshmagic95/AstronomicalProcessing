@@ -208,7 +208,7 @@ namespace AstronomicalProcessing
                 sum += neutrinoData[i];
             }
 
-            average = Math.Round((sum / arrayLength), 2);
+            average = Math.Round((sum / arrayLength), 2); // Round the average by 2 decimal places
             txtAvg.Text = average.ToString();
         }
     }
