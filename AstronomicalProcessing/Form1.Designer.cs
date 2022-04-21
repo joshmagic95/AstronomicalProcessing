@@ -214,6 +214,7 @@
             this.btnMidExtr.TabIndex = 17;
             this.btnMidExtr.Text = "Mid Extreme";
             this.btnMidExtr.UseVisualStyleBackColor = true;
+            this.btnMidExtr.Click += new System.EventHandler(this.MidExtreme);
             // 
             // txtMidExtr
             // 

@@ -186,7 +186,7 @@ namespace AstronomicalProcessing
             btnMode.Enabled = true;
             btnRange.Enabled = true;
             btnEdit.Enabled = true;
-            btnAvg.Enabled = true;
+            btnMidExtr.Enabled = true;
         }
         private void DisableButtons() {
             btnBinSearch.Enabled = false;
@@ -194,7 +194,7 @@ namespace AstronomicalProcessing
             btnMode.Enabled = false;
             btnRange.Enabled = false;
             btnEdit.Enabled = false;
-            btnAvg.Enabled = false;
+            btnMidExtr.Enabled = false;
         }
 
         // This method calculates the average of a sorted array using btnAvg
@@ -210,6 +210,28 @@ namespace AstronomicalProcessing
 
             average = Math.Round((sum / arrayLength), 2); // Round the average by 2 decimal places
             txtAvg.Text = average.ToString();
+        }
+
+        // This method calculates the mid-extreme of a sorted array using btnMidExtr
+        private void MidExtreme(object sender, EventArgs e)
+        {
+            double smallest = 0;
+            double largest = 0;
+            double midExtreme = 0;
+            for (int i = 0; i < arrayLength; i++)
+            {
+                if (i == 0)
+                {
+                    smallest = neutrinoData[i];
+                }
+                else if (i == (arrayLength - 1))
+                {
+                    largest = neutrinoData[i];
+                }
+            }
+
+            midExtreme = Math.Round(((smallest + largest) / 2 ), 2);
+            txtMidExtr.Text = midExtreme.ToString();
         }
     }
 }
