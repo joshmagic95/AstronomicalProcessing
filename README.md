@@ -3,6 +3,6 @@
 ## Team Name
 Josh and Rhys
 ## Scrum Master
-@joshmagic95 - Joshua
-## Team Member
 @SmackySpider - Rhys
+## Team Member
+@joshmagic95 - Joshua
