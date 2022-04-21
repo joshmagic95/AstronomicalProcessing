@@ -100,7 +100,7 @@ namespace AstronomicalProcessing
             int max = arrayLength - 1;
             if (!(Int32.TryParse(txtSearch.Text, out int target)))
             {
-                MessageBox.Show("You must enter an integer");
+                MessageBox.Show("You must enter a valid number");
                 return;
             }
 
@@ -121,6 +121,22 @@ namespace AstronomicalProcessing
                 else
                 {
                     min = mid + 1;
+                }
+            }
+            MessageBox.Show(target + " not found in array");
+        }
+        
+        // Search through the array until the target is found, or the array is fully searched
+        private void SequentialSearch(object sender, EventArgs e) {
+            if (!(Int32.TryParse(txtSearch.Text, out int target))) {
+                MessageBox.Show("You must enter a valid number");
+                return;
+            }
+            
+            for(int i = 0; i < arrayLength; i++) {
+                if (neutrinoData[i] == target) {
+                    MessageBox.Show(target + " Found at index " + i);
+                    return;
                 }
             }
             MessageBox.Show(target + " not found in array");
