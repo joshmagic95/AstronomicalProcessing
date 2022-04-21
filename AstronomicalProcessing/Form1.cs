@@ -29,6 +29,7 @@ namespace AstronomicalProcessing
             for (int i = 0; i < arrayLength; i++) {
                 neutrinoData[i] = rand.Next(10, 99);
             }
+            btnSort.Enabled = true;
         }
 
         // Clear the list box and reprint the array
@@ -64,7 +65,7 @@ namespace AstronomicalProcessing
         {
             FillArray();
             RefreshArray();
-            EnableSortButton();
+            DisableButtons();
         }
 
         // Sort the array using the bubble sorting algorithm when btnSort is clicked
@@ -84,8 +85,7 @@ namespace AstronomicalProcessing
             }
             RefreshArray();
             CheckDuplicate();
-            EnableSearchButton();
-            EnableEditButton();
+            EnableButtons();
         }
 
         // Perform a Binary Search when txtSearch has an integer value and btnSearch is clicked
@@ -175,24 +175,24 @@ namespace AstronomicalProcessing
             }
         }
 
-        // Enable Sort button
-        private void EnableSortButton()
-        {
-            btnSort.Enabled = true;
-        }
-
-        // Enable Search related text box and button
-        private void EnableSearchButton()
-        {
-            txtSearch.Enabled = true;
+        // Enable or disable buttons and text boxes that require the list to be sorted
+        private void EnableButtons() {
             btnBinSearch.Enabled = true;
-        }
-
-        // Enable Edit related text box and button
-        private void EnableEditButton()
-        {
-            txtEdit.Enabled = true;
+            btnMode.Enabled = true;
+            btnRange.Enabled = true;
             btnEdit.Enabled = true;
+
+            txtSearch.Enabled = true;
+            txtEdit.Enabled = true;
+        }
+        private void DisableButtons() {
+            btnBinSearch.Enabled = false;
+            btnMode.Enabled = false;
+            btnRange.Enabled = false;
+            btnEdit.Enabled = false;
+
+            txtSearch.Enabled = false;
+            txtEdit.Enabled = false;
         }
     }
 }
