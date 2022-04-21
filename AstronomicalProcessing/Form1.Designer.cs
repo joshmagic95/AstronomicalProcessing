@@ -187,6 +187,7 @@
             this.btnAvg.TabIndex = 14;
             this.btnAvg.Text = "Average";
             this.btnAvg.UseVisualStyleBackColor = true;
+            this.btnAvg.Click += new System.EventHandler(this.Average);
             // 
             // txtAvg
             // 

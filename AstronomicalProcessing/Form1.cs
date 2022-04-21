@@ -186,6 +186,7 @@ namespace AstronomicalProcessing
             btnMode.Enabled = true;
             btnRange.Enabled = true;
             btnEdit.Enabled = true;
+            btnAvg.Enabled = true;
         }
         private void DisableButtons() {
             btnBinSearch.Enabled = false;
@@ -193,6 +194,22 @@ namespace AstronomicalProcessing
             btnMode.Enabled = false;
             btnRange.Enabled = false;
             btnEdit.Enabled = false;
+            btnAvg.Enabled = false;
+        }
+
+        // This method calculates the average of a sorted array using btnAvg
+        private void Average(object sender, EventArgs e)
+        {
+            double sum = 0;
+            double average = 0;
+
+            for (int i = 0; i < arrayLength; i++)
+            {
+                sum += neutrinoData[i];
+            }
+
+            average = Math.Round((sum / arrayLength), 2);
+            txtAvg.Text = average.ToString();
         }
     }
 }
